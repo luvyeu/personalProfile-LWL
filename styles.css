@@ -1,0 +1,120 @@
+/* styles.css */
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* Add padding to create space on the left side */
+}
+
+nav img {
+    height: 40px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Add padding to the working-experience section */
+.working-experience,
+.my-goal,
+.my-profile {
+    padding-left: 20px;
+}
+
+
+
+
+
+
+/* style for own story */
+.story-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center align items */
+}
+
+
+.story-item {
+    /*flex-basis: calc(33.33% - 20px); /* 3 items per row with 20px gap */
+    /*flex: 1 1 auto; /* Grow, shrink, basis */
+    /*max-width: calc(33.33% - 20px); /* Set maximum width for each item */
+
+
+
+
+    flex: 1 1 300px; /* Initially, each item occupies 300px width */
+    max-width: 100%; /* Ensure items don't exceed container width */
+    /*flex-basis: 100%; /* Set each item to occupy its own row */ 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+.story-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.story-item h3 {
+    margin-top: 10px;
+}
+
+.story-item p {
+    margin-top: 5px;
+}
+
+
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .story-item {
+        flex-basis: calc(50% - 20px); /* 2 items per row with 20px gap */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .story-item {
+        flex-basis: calc(100% - 20px); /* 1 item per row with 20px gap */
+    }
+}
+
+
+

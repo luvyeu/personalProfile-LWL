@@ -1,0 +1,181 @@
+/* styles.css */
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    height: 40px; /* Adjust height as needed */
+    margin-right: 10px; /* Adjust margin as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    /*color: #f8f9fa;  Light gray hover color */
+    color: #f00; /* Change color on hover as desired */
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+.hero {
+    position: relative;
+    height: 20vh; /* Change to percentage-based height */
+    /*height: 150px; /* edit this to change slider image height*/
+    overflow: hidden;
+    margin-bottom: 3px; /* Add this line to adjust the margin from the bottom */
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto; /* Ensure images maintain aspect ratio */
+    vertical-align: middle;
+}
+
+
+
+.about {
+    margin-top: 50px;
+    background-color: #d1c23d; /* Change background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0px solid #ff0000; /* Add colored border */
+}
+
+.about h2 {
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 0; /* Add this line to reset the top margin */
+}
+
+.background {
+    margin-top: 50px;
+    /*background-color: #d1c23d; /* Change background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid #d1c23d; /* Add colored border */
+}
+
+.background h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.vision-mission {
+    margin-top: 50px;
+    background-color: #d1c23d; /* Change background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 0px solid #ff0000; /* Add colored border */
+}
+
+.vision-mission h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* styles for story board */
+/*.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}*/
+
+
+
+/*responsive to screen size and adjust the number of story-item elements displayed in a row based on available space, you can use CSS Grid along with media queries.*/
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax values as needed */
+    gap: 20px;
+}
+
+@media screen and (max-width: 900px) { /* Adjust max-width as needed */
+    .story-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax values as needed */
+    }
+}
+
+@media screen and (max-width: 600px) { /* Adjust max-width as needed */
+    .story-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust minmax values as needed */
+    }
+}
+
+
+.story-item {
+    border: 3px solid #d1c23d;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.story-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.story-item h3 {
+    margin-top: 10px;
+}
+
+.story-item p {
+    margin-top: 5px;
+}
+
+
+
+
+

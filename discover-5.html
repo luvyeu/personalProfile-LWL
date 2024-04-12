@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="styleDiscover.css">
+    <style>
+        /* General styles for the slideshow container and images */
+        .slideshow-container {
+            max-width: 800px; /* Set the maximum width of the container */
+            /*height: 400px;  Set a fixed height for the container */
+            height: 100%; /* Change to 100% */
+            margin: auto;
+            margin-top: 10px; /* Reduce top margin */
+            overflow: hidden; /* Hide the overflow to keep images within the container */
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%; /* Make sure each slide takes the full width of the container */
+            height: 100%; /* Make sure each slide takes the full height of the container */
+            object-fit: cover; /* Ensure the entire image is visible, even if it's larger than the container */
+        }
+
+        .slideshow-container img {
+            width: 100%; /* Make sure the images fill the available space within the slides */
+            height: 100%;
+            object-fit: cover; /* Apply object-fit to the images as well */
+        }
+
+        /* Styles for the title container and back button */
+        .title-container {
+            margin-bottom: 10px; /* Reduce bottom margin */
+        }
+
+        .backButton {
+            margin: 5px 10px; /* Add spacing between buttons */
+            padding: 10px 20px; /* Set the padding to create a square button */
+            background-color: #116479;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Styles for the next and previous buttons */
+        .prevButton,
+        .nextButton {
+            margin: 5px 10px; /* Add spacing between buttons */
+            padding: 10px 20px; /* Set the padding to create a square button */
+            background-color: #116479;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>EDUCATION</h1>
+            <h2></h2>
+            <!-- Back button -->
+            <button class="backButton">Back 返回</button>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <button class="prevButton" onclick="plusSlides(-1)">❮ Previous</button>
+        <button class="nextButton" onclick="plusSlides(1)">Next ❯</button>
+
+        <div class="slideshow-container">
+            <!-- Slides -->
+            <div class="mySlides">
+                <img src="images/education/script-cn.png" alt="Slide 1">
+            </div>
+
+            <div class="mySlides">
+                <img src="images/education/script-en.png" alt="Slide 1">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scriptDiscoverExt.js"></script>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+

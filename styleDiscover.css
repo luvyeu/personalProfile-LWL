@@ -1,0 +1,290 @@
+/* styles.css */
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* Add padding to create space on the left side */
+    padding-right: 20px; /* Add padding to create space on the right side */
+
+}
+
+nav img {
+    height: 40px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #555;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+/* Add padding to the main container */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to create space on the left and right sides */
+    padding-bottom: 20px; /* Add padding to create space at the bottom */
+}
+
+
+
+
+
+
+
+
+/* styles for button*/
+/*.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}*/
+
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center; /* Center align the content */
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minimum and maximum width of each column */
+    gap: 20px;
+    justify-content: center; /* Center the grid items */
+}
+
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 3 columns */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .story-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 1 column */
+    }
+}
+
+/* For screens larger than 1200px */
+@media (min-width: 1200px) {
+    /* Add your styles here */
+    .story-grid {
+        grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns */
+    }
+
+    /* Additional styles for other elements */
+}
+
+@media (min-width: 900px) {
+    /* Add your styles here */
+    .story-grid {
+        grid-template-columns: repeat(3, 1fr); /* Adjust to 4 columns */
+    }
+}
+
+
+
+
+/* styles for Story Boards */
+.story-boards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minimum and maximum width of each column */
+    gap: 20px;
+}
+
+/* Convert story-item to button style */
+.story-item {
+    border: none; /* Remove border */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #116479; /* Set button background color */
+    color: white; /* Set button text color */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Include transform in the transition property */
+}
+
+/* Hover effect for story-item */
+.story-item:hover {
+    background-color: rgb(87, 28, 143); /* Darker color on hover */
+    transform: scale(1.1);
+}
+
+.story-item img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.story-item h3 {
+    margin-top: 10px;
+}
+
+.story-item p {
+    margin-top: 5px;
+}
+
+
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .story-item {
+        flex-basis: calc(50% - 20px); /* 2 items per row with 20px gap */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .story-item {
+        flex-basis: calc(100% - 20px); /* 1 item per row with 20px gap */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General styles for the slideshow container and images */
+.slideshow-container {
+    max-width: calc(100% - 40px); /* Adjusted width with padding on both sides */
+    height: 100%; /* Change to 100% */
+    margin: auto;
+    margin-top: 10px; /* Reduce top margin */
+    overflow: hidden; /* Hide the overflow to keep images within the container */
+    padding-left: 10px; /* Add padding to the left side */
+    padding-right: 10px; /* Add padding to the right side */
+}
+
+
+
+/* Additional styles for discover-1-2-3-4.html */
+
+.prevButton {
+    margin-top: 20px; /* Add some space between the form button and other elements */
+    padding: 15px 30px; /* Padding for the form button */
+    background-color: #d3bb35; /* Green background color */
+    color: #116479; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Round the corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 16px; /* Font size for the form button */
+
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Include transform in the transition property */
+
+    /* Add hover effect */
+    &:hover {
+        background-color: #5b21c7; /* Darker green on hover */
+    }
+
+    /* Additional styles for larger screens if needed */
+    @media (min-width: 768px) {
+        font-size: 18px; /* Increase font size for larger screens */
+        padding: 20px 40px; /* Adjust padding for larger screens */
+    }
+}
+
+.nextButton {
+    margin-top: 20px; /* Add some space between the form button and other elements */
+    padding: 15px 30px; /* Padding for the form button */
+    background-color: #d3bb35; /* Green background color */
+    color: #116479; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Round the corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 16px; /* Font size for the form button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Include transform in the transition property */
+
+    /* Add hover effect */
+    &:hover {
+        background-color: #5b21c7; /* Darker green on hover */
+    }
+
+    /* Additional styles for larger screens if needed */
+    @media (min-width: 768px) {
+        font-size: 18px; /* Increase font size for larger screens */
+        padding: 20px 40px; /* Adjust padding for larger screens */
+    }
+}
+
+
+
+/* back button for discover-1.html */
+.backButton {
+    margin-top: 20px; /* Add some space between the form button and other elements */
+    padding: 15px 30px; /* Padding for the form button */
+    background-color: #d3bb35; /* Green background color */
+    color: #116479; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Round the corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    font-size: 16px; /* Font size for the form button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Include transform in the transition property */
+
+    /* Add hover effect */
+    &:hover {
+        background-color: #29b96a; /* Darker blue on hover */
+    }
+}
+
+
+
+
+
+
+
+
+
