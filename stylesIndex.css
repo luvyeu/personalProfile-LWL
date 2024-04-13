@@ -14,6 +14,13 @@ header {
     padding: 1rem;
 }
 
+footer {
+
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -21,7 +28,7 @@ nav {
 
 nav img {
     height: 40px; /* Adjust height as needed */
-    margin-right: 10px; /* Adjust margin as needed */
+    margin-right: 5px; /* Adjust margin as needed */
 }
 
 nav ul {
@@ -32,7 +39,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 8px;
 }
 
 nav ul li a {
@@ -85,6 +92,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 0px solid #ff0000; /* Add colored border */
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .about h2 {
@@ -100,6 +109,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 3px solid #d1c23d; /* Add colored border */
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .background h2 {
@@ -114,6 +125,8 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 0px solid #ff0000; /* Add colored border */
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .vision-mission h2 {
@@ -123,15 +136,18 @@ main {
 
 
 
-
-
 /* styles for story board */
+.story-boards{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
 /*.story-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }*/
-
 
 
 /*responsive to screen size and adjust the number of story-item elements displayed in a row based on available space, you can use CSS Grid along with media queries.*/
